@@ -1,8 +1,8 @@
 <template>
-  <v-container class="site-header pa-0">
+  <v-container class="site__header pa-0">
     <!-- First Session -->
     <v-layout align-center column>
-      <v-flex class="xs12 header-image mt-5">
+      <v-flex class="xs12 header__image mt-5">
         <v-avatar :size="avatar.img_size">
           <img
             src="https://lmpixels.com/wp/kerge-wp/demo2dark/wp-content/uploads/sites/8/2018/03/my_photo.png"
@@ -10,16 +10,23 @@
           >
         </v-avatar>
       </v-flex>
-      <v-flex xs12 mt-4 class="text-xs-center site-title-block">
-        <h2 class="site-title headline">林逸倫 Allen</h2>
-        <h3 class="site-subtitle subheading my-2">Front-End Developer</h3>
+      <v-flex xs12 mt-4 class="text-xs-center">
+        <h2 class="site__title headline">林逸倫 Allen</h2>
+        <h3 class="site__subtitle subheading my-2">Front-End Developer</h3>
       </v-flex>
     </v-layout>
 
     <!-- Second Session -->
     <v-layout align-center column mt-4>
-      <v-flex class="site-nav xs12">
-        <v-layout py-2 class="site-nav--item" v-for="(item, index) in nav_items" :key="index">
+      <v-flex class="site__nav xs12">
+        <v-layout
+          py-2
+          class="site__nav__item"
+          :class="{'site__nav__item--selected': checkCurrentPage(item)}"
+          v-for="(item, index) in nav_items"
+          :key="index"
+          @click="routerPush(item.to)"
+        >
           <v-spacer></v-spacer>
           <v-flex>
             <v-icon dark :color="item.color">{{item.icon}}</v-icon>
@@ -44,6 +51,7 @@
 export default {
   data() {
     return {
+      isSelected: true,
       avatar: {
         img_size: 110
       },
@@ -51,27 +59,32 @@ export default {
         {
           icon: "home",
           color: "#F44336",
-          content: "Home"
+          content: "Home",
+          to: "/"
         },
         {
           icon: "person",
           color: "#008073",
-          content: "About"
+          content: "About",
+          to: "/about"
         },
         {
           icon: "trending_up",
           color: "#05BDD5",
-          content: "Experience"
+          content: "Experience",
+          to: "/experience"
         },
         {
           icon: "web",
           color: "#3F51B5",
-          content: "Project"
+          content: "Project",
+          to: "/project"
         },
         {
           icon: "equalizer",
           color: "#9C27B0",
-          content: "Skills"
+          content: "Skills",
+          to: "/skills"
         },
         {
           icon: "description",
@@ -94,27 +107,18 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    checkCurrentPage(selectedPage) {
+      const selectedPageURL = selectedPage.to;
+      const currentPageURL = this.$route.path;
+      return selectedPageURL == currentPageURL;
+    },
+    routerPush(to) {
+      if (to) {
+        this.$router.push(to);
+      }
+    }
   }
 };
 </script>
-
-
-<style lang="scss" scoped>
-.site-header {
-  background-color: #222222;
-  height: 100vh;
-  color: white;
-}
-
-.site-nav {
-  width: 100%;
-
-  &--item {
-    cursor: pointer;
-    &:hover {
-      background-color: #333333;
-      border-right: 2px solid #ffcd38;
-    }
-  }
-}
-</style>

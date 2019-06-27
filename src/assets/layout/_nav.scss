@@ -1,0 +1,21 @@
+.site__header {
+    background-color: #222222;
+    height: 100vh;
+    color: white;
+}
+
+.site__nav {
+    width: 100%;
+
+    &__item {
+        cursor: pointer;
+
+        &--selected {
+            @include navbar__item--selected;
+        }
+
+        &:hover {
+            @include navbar__item--selected;
+        }
+    }
+}

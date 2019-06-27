@@ -1,5 +1,5 @@
 <template>
-  <v-layout>
+  <v-layout class="home">
     <v-flex>
       <v-img
         height="100vh"

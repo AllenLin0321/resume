@@ -1,13 +1,20 @@
 <template>
   <v-app>
-    <v-container fluid pa-0>
+    <v-container fluid pa-0 class="container">
       <v-layout row wrap>
+        <!-- Nav Bar -->
         <v-flex xs3>
           <Nav></Nav>
         </v-flex>
 
-        <v-flex xs7 ma-0 ml-3>
-          <router-view/>
+        <!-- Sub Pages -->
+        <v-flex pl-3>
+          <transition
+            name="router-anim"
+            enter-active-class="animated slideInRight fast"
+          >
+            <router-view class="subpages"/>
+          </transition>
         </v-flex>
       </v-layout>
     </v-container>
@@ -18,13 +25,13 @@
 import Nav from "@/components/Nav";
 export default {
   name: "App",
-  data() {
-    return {
-      //
-    };
-  },
   components: {
     Nav
   }
 };
 </script>
+
+<style lang="scss">
+@import "@/assets/main.scss";
+</style>
+
