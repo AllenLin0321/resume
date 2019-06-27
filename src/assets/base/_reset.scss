@@ -7,10 +7,12 @@
 *::before,
 *::after {
     box-sizing: inherit;
+    
 }
 
 html {
     box-sizing: border-box;
+    font-size: 62.5%; //1 rem = 100px; 10px/16px = 62.5%
 }
 
 body {

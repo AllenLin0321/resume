@@ -1,14 +1,11 @@
 <template>
-  <v-layout class="home">
-    <v-flex>
-      <v-img
-        height="100vh"
-        contain
-        position="center"
-        src="https://www.smallbizdaily.com/wp-content/uploads/2018/11/shutterstock_696061426-min.jpg"
-      ></v-img>
-    </v-flex>
-  </v-layout>
+  <div class="home">
+    <div class="home__block">
+      <p class="home__block--title">林逸倫 Allen</p>
+      <br>
+      <p class="home__block--subTitle">Front-End Developer</p>
+    </div>
+  </div>
 </template>
 
 <script>

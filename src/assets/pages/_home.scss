@@ -1,0 +1,25 @@
+.home {
+    background-image: linear-gradient($home-overlay), url('./assets/img/home_background.jpg');
+    position: relative;
+    &__block {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-white;
+        &--title {
+            font-weight: bold;
+            font-size: 6rem;
+            animation: typing 2s steps(9);
+            animation-delay: 1s;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+        }
+        &--subTitle {
+            text-align: center;
+            font-weight: 400;
+            font-size: 3rem;
+        }
+    }
+}

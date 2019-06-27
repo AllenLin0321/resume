@@ -1,11 +1,20 @@
-// Home Specific styles
-@import './themes/theme';
+// Variables 
+@import './abstracts/variables';
+
+// Animation
+@import './abstracts/animate';
 
 // Mixins 
 @import './abstracts/mixins';
 
+// Normalize
+@import './base/reset';
+
+// Home Specific styles
+@import './base/typography';
+
 // Nav Bar
 @import './layout/nav';
 
-// Normalize
-@import './base/reset';
+// Home Page
+@import './pages/home';
