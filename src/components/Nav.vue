@@ -1,8 +1,8 @@
 <template>
-  <v-container class="site__header pa-0">
+  <v-container class="site__header">
     <!-- First Session -->
     <v-layout align-center column>
-      <v-flex class="xs12 header__image mt-5">
+      <v-flex class="xs12 header__image">
         <v-avatar :size="avatar.img_size">
           <img
             src="https://lmpixels.com/wp/kerge-wp/demo2dark/wp-content/uploads/sites/8/2018/03/my_photo.png"
@@ -12,25 +12,24 @@
       </v-flex>
       <v-flex xs12 mt-4 class="text-xs-center">
         <h2 class="site__title headline">林逸倫 Allen</h2>
-        <h3 class="site__subtitle subheading my-2">Front-End Developer</h3>
+        <h3 class="site__subtitle subheading my-2">Front - End Developer</h3>
       </v-flex>
     </v-layout>
 
     <!-- Second Session -->
-    <v-layout align-center column mt-4>
+    <v-layout align-center column>
       <v-flex class="site__nav xs12">
         <v-layout
-          py-2
           class="site__nav__item"
           :class="{'site__nav__item--selected': checkCurrentPage(item)}"
           v-for="(item, index) in nav_items"
           :key="index"
           @click="routerPush(item.to)"
-        >
+        >               
           <v-spacer></v-spacer>
           <v-flex>
-            <v-icon dark :color="item.color">{{item.icon}}</v-icon>
-            <span class="subheading ml-2">{{item.content}}</span>
+            <v-icon class="site__nav__icon" dark :color="item.color">{{item.icon}}</v-icon>
+            <span class="subheading">{{item.content}}</span>
           </v-flex>
         </v-layout>
       </v-flex>

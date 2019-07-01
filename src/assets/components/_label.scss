@@ -1,0 +1,15 @@
+.label {
+    color: $color-white;
+    background-color: $label__background;
+    position: relative;
+    padding: 1rem;
+    display: inline-block;
+    padding-left: 7rem;
+    transform: translateX(-8rem);
+
+    &__title {
+        color: $color-white;
+        font-size: 2.4rem;
+    }
+
+}

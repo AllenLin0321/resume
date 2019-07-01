@@ -1,14 +1,21 @@
 .site__header {
+    padding: 0;
     background-color: $page-grey;
     height: 100vh;
     color: white;
 }
 
+.header__image {
+    margin-top: 5rem;
+}
+
 .site__nav {
     width: 100%;
+    margin-top: 1rem;
 
     &__item {
         cursor: pointer;
+        padding: .8rem;
 
         &--selected {
             @include navbar__item--selected;
@@ -17,5 +24,9 @@
         &:hover {
             @include navbar__item--selected;
         }
+    }
+
+    &__icon {
+        margin-right: 1rem;
     }
 }

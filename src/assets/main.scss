@@ -13,8 +13,14 @@
 // Home Specific styles
 @import './base/typography';
 
-// Nav Bar
+// Component - Label
+@import './components/label.scss';
+
+// Layout - Nav Bar
 @import './layout/nav';
+
+// Layout - Page
+@import './layout/page';
 
 // Home Page
 @import './pages/home';

@@ -1,6 +1,8 @@
 <template>
-  <div class="aboutPage">
-    <h1 class="primary--text">About</h1>
+  <div class="subPage aboutPage">
+    <div class="label">
+      <h2 class="label__title">About Me</h2>
+    </div>
   </div>
 </template>
 
