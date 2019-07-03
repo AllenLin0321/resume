@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600&display=swap');
+
 // Variables 
 @import './abstracts/variables';
 
@@ -22,5 +24,8 @@
 // Layout - Page
 @import './layout/page';
 
-// Home Page
+// Pages - Home Page
 @import './pages/home';
+
+// Pages - Skills Page
+@import './pages/skills';

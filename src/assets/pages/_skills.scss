@@ -1,0 +1,12 @@
+.card {
+    padding: 1rem;
+    &__title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 2rem;
+        border-bottom: 1px solid $page-grey;
+    }
+}
+
+.skill__img {
+    width: 50%;
+}

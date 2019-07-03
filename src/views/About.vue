@@ -1,12 +1,20 @@
 <template>
   <div class="subPage aboutPage">
-    <div class="label">
-      <h2 class="label__title">About Me</h2>
-    </div>
+    <Label :name="labelName" />
   </div>
 </template>
 
-<style lang="scss" scoped>
 
-</style>
-
+<script>
+import Label from "@/components/Label";
+export default {
+  data() {
+    return {
+      labelName: "About Me"
+    };
+  },
+  components: {
+    Label
+  }
+};
+</script>
